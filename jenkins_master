@@ -14,7 +14,7 @@ pipeline {
                 script{
                     def data = readFile(file: 'data.json')
                     // build job: 'slave', parameters: [string(name: 'NAME', value: data.data.name), string(name: 'Ages', value: data.data.age)]
-                    println(data)
+                    println(data.name)
                 }
             }
         }
