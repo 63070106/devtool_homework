@@ -1,13 +1,13 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'NAME', defaultValue: 'Tuchsanai', description: 'Enter your name')
-        string(name: 'Ages', defaultValue: '15', description: 'Enter your age')
+        string(name: 'NAME', defaultValue: 'Default', description: 'Enter your name')
+        string(name: 'Ages', defaultValue: '0', description: 'Enter your age')
     }
     stages {
         stage('Example') {
             steps {
-                echo "Hello from Slave ${params.NAME} ${params.Ages} years old"
+                echo "Hello from Slave ${params.NAME}, ${params.Ages} years old"
                 
             }
         }
